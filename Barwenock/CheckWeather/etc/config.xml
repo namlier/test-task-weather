@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <weather>
+            <settings>
+                <api_url>https://api.stormglass.io/v2/weather/point?</api_url>
+                <secret_key>a883899e-5e87-11ec-81ce-0242ac130002-a8838a16-5e87-11ec-81ce-0242ac130002</secret_key>
+            </settings>
+        </weather>
+    </default>
+</config>

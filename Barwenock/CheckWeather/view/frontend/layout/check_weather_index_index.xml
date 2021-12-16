@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+        <block class="Magento\Framework\View\Element\Template" name="check_weather" template="Barwenock_CheckWeather::index.phtml" >
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="knockout" xsi:type="array">
+                            <item name="component" xsi:type="string">Barwenock_CheckWeather/js/getData</item>
+                            <item name="template" xsi:type="string">Barwenock_CheckWeather/data</item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+</page>

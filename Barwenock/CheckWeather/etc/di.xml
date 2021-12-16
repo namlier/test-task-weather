@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Barwenock\CheckWeather\Api\ApiDataRepositoryInterface" type="Barwenock\CheckWeather\Model\ApiDataRepository"/>
+    <preference for="Barwenock\CheckWeather\Api\Data\DataInterface" type="Barwenock\CheckWeather\Model\DataModel"/>
+    <preference for="Barwenock\CheckWeather\Api\Data\DataSearchResultInterface" type="Magento\Framework\Api\SearchResults"/>
+    <preference for="Barwenock\CheckWeather\Api\Data\DataManagementInterface" type="Barwenock\CheckWeather\Model\DataManagement"/>
+    <virtualType name="Barwenock\CheckWeather\Model\ResourceModel\Group\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">api_data</argument>
+            <argument name="resourceModel" xsi:type="string">Barwenock\CheckWeather\Model\ResourceModel\Weather\Collection</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="api_grid_index_listing_data_source" xsi:type="string">Barwenock\CheckWeather\Model\ResourceModel\Group\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

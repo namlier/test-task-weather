@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Barwenock_CheckWeather::index" title="Weather Data GRID" module="Barwenock_CheckWeather" sortOrder="200" resource="Magento_Backend::content" parent="Magento_Backend::content" action="api_grid/index/index"/>
+    </menu>
+</config>
